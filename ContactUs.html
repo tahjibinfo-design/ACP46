@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Capstone Project | Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #66a139b2;
+            color: red;
+        }
+
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: blue;
+        }
+
+        .pimg1,
+        .pimg2,
+        .pimg3,
+        .pimg4 {
+            position: relative;
+            opacity: 0.70;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .pimg1 {
+            background-image: url("pic1.jpeg");
+            min-height: 400px;
+        }
+
+        .pimg2 {
+            background-image: url("pic2.jpg");
+            min-height: 400px;
+        }
+
+        .pimg3 {
+            background-image: url("pic3.jpg");
+            min-height: 400px;
+        }
+
+        .pimg4 {
+            background-image: url("pic4.jpg");
+            min-height: 400px;
+        }
+
+        .section {
+            text-align: center;
+            padding: 50px 80px;
+        }
+
+        .section-dark {
+            background-color: #282E34;
+            color: white;
+        }
+
+        .ptext {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            font-size: 27px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        .ptext .border {
+            background-color: #111;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .ptext .border .trans {
+            background-color: transparent;
+        }
+
+        @media(max-width: 568px) {
+
+            .pimg1,
+            .pimg2,
+            .pimg3,
+            .pimg4 {
+                background-attachment: scroll;
+            }
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #form-message {
+            max-width: 600px;
+            margin: 0 auto 16px auto;
+            padding: 10px 0;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="Activity1.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="ContactUs.html" class="active">Contact Us</a>
+    </div>
+
+    <section class="section section-dark">
+        <h2>Get in Touch</h2>
+        <p>Have a question or want to know more about this capstone project? Send your message below and we will respond
+            promptly.</p>
+    </section>
+
+    <section class="section">
+        <div id="form-message"></div>
+        <form id="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="Name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="Email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="Message" placeholder="Enter your message here" rows="6" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <div class="pimg4">
+        <div class="ptext">
+            <span class="border trans">Contact</span>
+        </div>
+    </div>
+
+    <section class="section section-dark">
+        <h2>Contact Details</h2>
+        <p>Email: tahjibinfo@gmail.com<br>Phone: +880 1877000300<br>Location: 123 Project Avenue, Example City</p>
+    </section>
+
+    <div class="footer">
+        <p>@ 2026 Capstone Project. All rights reserved by Tahjib Bin Jihad.</p>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var message = document.getElementById('message').value.trim();
+            var status = document.getElementById('form-message');
+
+            if (!name || !email || !message) {
+                status.textContent = 'Please complete all fields before sending.';
+                status.style.color = '#ffdddd';
+                return;
+            }
+
+            var subject = encodeURIComponent('Contact Form Submission from ' + name);
+            var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+            var mailto = 'mailto:tahjibinfo@gmail.com?subject=' + subject + '&body=' + body;
+
+            status.textContent = 'Opening your email app. Please send the message there.';
+            status.style.color = '#b5ffb8';
+            window.location.href = mailto;
+        });
+    </script>
+</body>
+
+</html>

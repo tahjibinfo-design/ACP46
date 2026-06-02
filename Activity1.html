@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Capstone Project</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #66a139b2;
+            color: red;
+        }
+
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: blue;
+        }
+
+        .pimg1,
+        .pimg2,
+        .pimg3,
+        .pimg4 {
+            position: relative;
+            opacity: 0.70;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .pimg1 {
+            background-image: url("pic1.jpeg");
+            min-height: 400px;
+        }
+
+        .pimg2 {
+            background-image: url("pic2.jpg");
+            min-height: 400px;
+        }
+
+        .pimg3 {
+            background-image: url("pic3.jpg");
+            min-height: 400px;
+        }
+
+        .pimg4 {
+            background-image: url("pic4.jpg");
+            min-height: 400px;
+        }
+
+        .section {
+            text-align: center;
+            padding: 50px 80px;
+        }
+
+        .section-dark {
+            background-color: #282E34;
+            color: white;
+        }
+
+        .ptext {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            font-size: 27px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        .ptext .border {
+            background-color: #111;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .ptext .border .trans {
+            background-color: transparent;
+        }
+
+        @media(max-width: 568px) {
+
+            .pimg1,
+            .pimg2,
+            .pimg3,
+            .pimg4 {
+                background-attachment: scroll;
+            }
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="Activity1.html" class="active">Home</a>
+        <a href="AboutUs.html">AboutUs</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="ContactUs.html">ContactUs</a>
+    </div>
+    <section style="height: 100%; width: 100%; text-align: center; padding: 50px 80px;">
+        <img src="pic1.jpeg" alt="Codingal" class="mySlides" style="height: 30%; width: 30%">
+        <img src="pic2.jpg" alt="pic" class="mySlides" style="height: 30%; width: 30%">
+        <img src="pic3.jpg" alt="pic" class="mySlides" style="height: 35%; width: 35%">
+        <img src="pic4.jpg" alt="pic" class="mySlides" style="height: 30%; width: 30%">
+    </section>
+    <section class="section section-dark">
+        <h2>Section 1</h2>
+        <p> <a href="https://www.codingal.com">Codingal</a> is an accredited online education platform dedicated to
+            teaching coding and artificial intelligence to kids and <br>
+            teens in grades 1 through 12. Its mission is to make learning fun and prepare students for a digital future
+            through a <br>
+            structured, project-based curriculum.</p>
+    </section>
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border trans">Codingal</span>
+        </div>
+    </div>
+    <section class="section section-dark">
+        <h2>Section 2</h2>
+        <p><a href="https://www.roblox.com">Roblox</a> is an immersive online gaming and creation platform where users
+            can play, create, and share millions of 3D <br>
+            virtual experiences. Operating as a vast global community, it empowers anyone to design their own games
+            using the <br>
+            platform's creation engine and interact with friends across various devices.</p>
+    </section>
+    <div class="pimg2">
+        <div class="ptext">
+            <span class="border trans">Roblox</span>
+        </div>
+    </div>
+    <section class="section section-dark">
+        <h2>Section 3</h2>
+        <p><a href="https://www.minecraft.net">Minecraft</a> is a wildly popular 3D sandbox video game where players
+            explore, gather resources, and build structures in a procedurally generated blocky world. Often described as
+            "virtual Lego," the game offers limitless freedom, allowing users to either fight for survival against
+            monsters or unleash their creativity without limits.</p>
+    </section>
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border trans">Minecraft</span>
+        </div>
+    </div>
+    <section class="section section-dark">
+        <h2>Section 4</h2>
+        <p><a href="https://www.microsoft.com/en-us/microsoft-365">Microsoft Office</a> is a widely used suite of
+            productivity software developed by Microsoft. It includes core applications designed for creating documents,
+            spreadsheets, presentations, and managing emails. Recently, Microsoft transitioned its flagship Office suite
+            to a subscription-based model known as Microsoft 365.</p>
+    </section>
+    <div class="pimg4">
+        <div class="ptext">
+            <span class="border trans">Microsoft Office</span>
+        </div>
+    </div>
+    <div class="footer">
+        <p>@ 2026 Capstone Project. All rights reserved by Tahjib Bin Jihad.</p>
+    </div>
+    <script>
+        var my_index = 0
+        carousel()
+        function carousel() {
+            var i
+            var x = document.getElementsByClassName("mySlides")
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"
+            }
+            my_index++
+            if (my_index > x.length) {
+                my_index = 1
+            }
+            x[my_index - 1].style.display = "block"
+            setTimeout(carousel, 2000)
+        }
+    </script>
+</body>
+
+</html>
