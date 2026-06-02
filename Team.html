@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Capstone Project | Team</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #66a139b2;
+            color: red;
+        }
+
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: blue;
+        }
+
+        .section {
+            text-align: center;
+            padding: 50px 80px;
+        }
+
+        .section-dark {
+            background-color: #282E34;
+            color: white;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .team-member {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .team-member h3 {
+            margin-top: 0;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="Activity1.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Services.html">Services</a>
+        <a href="Team.html" class="active">Team</a>
+        <a href="ContactUs.html">Contact Us</a>
+    </div>
+
+    <section class="section section-dark">
+        <h2>Meet the Team</h2>
+        <p>Learn more about the contributors and the roles behind this capstone website.</p>
+    </section>
+
+    <section class="section">
+        <div class="team-grid">
+            <div class="team-member">
+                <h3>Tahjib Bin Jihad</h3>
+                <p>Lead designer and developer, responsible for the website layout, visuals, and overall project
+                    direction.</p>
+            </div>
+            <div class="team-member">
+                <h3>Project Coordinator</h3>
+                <p>Manages page structure, content flow, and ensures the capstone project is easy to navigate and
+                    informative.</p>
+            </div>
+            <div class="team-member">
+                <h3>UX Specialist</h3>
+                <p>Focuses on accessibility and user experience, ensuring the site is clear, readable, and engaging.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <h2>Team Vision</h2>
+        <p>Our aim is to craft a polished, user-friendly website that showcases strong HTML and CSS fundamentals.</p>
+    </section>
+
+    <div class="footer">
+        <p>@ 2026 Capstone Project. All rights reserved by Tahjib Bin Jihad.</p>
+    </div>
+</body>
+
+</html>
